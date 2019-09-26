@@ -7,3 +7,9 @@ steps:
     image: node:alpine
     commands:
       - echo 'Run CI / CD Pipeline on Drone'
+  - name: slack
+    image: plugins/slack
+    settings:
+      webhook: https://hooks.slack.com/services/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
+      channel: test-ci-romain
+      username: drone-CI
