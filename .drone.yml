@@ -11,6 +11,7 @@ steps:
     image: node:alpine
     commands:
       - npm run build
+      - tar -czvf release.tar.gz -C build .
   - name: test
     image: node:alpine
     commands:
